@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- ✅ ADD THIS LINE -->
+  <title>Financial Freedom Journey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onclick="closeMenu()">
+
+  <!-- LOGO -->
+  <header class="top-bar">
+    <a href="index.html">
+      <img src="images/logo.png" class="logo" alt="Financial Freedom Journey">
+    </a>
+  </header>
+
+  <!-- LEFT PANEL -->
+  <main class="home-content">
+
+    <!-- STRATEGY -->
+    <div class="strategy-box">
+      <span class="dropbtn" onclick="toggleMenu(event)">Strategy ▾</span>
+      <div class="dropdown-content" id="strategyMenu">
+	<a href="common.html">Common Signal</a>
+        <a href="orb.html">ORB Strategy</a>
+        <a href="fifteen.html">15-Min Strategy</a>
+      </div>
+    </div>
+
+    <!-- TWO-LINE TITLE -->
+    <h1 class="hero-title">
+      <span class="line1">Financial Freedom</span>
+      <span class="line2">Journey</span>
+    </h1>
+
+    <p class="subtitle">
+      • Discipline • Patience • Consistency<br>
+      Building wealth through rule-based trading
+    </p>
+
+  </main>
+
+  <script>
+    function toggleMenu(e) {
+      e.stopPropagation();
+      const m = document.getElementById("strategyMenu");
+      m.style.display = m.style.display === "block" ? "none" : "block";
+    }
+    function closeMenu() {
+      const m = document.getElementById("strategyMenu");
+      if (m) m.style.display = "none";
+    }
+  </script>
+<!-- DISCLAIMER -->
+<footer class="disclaimer">
+  <p>
+    ⚠️ <strong>Disclaimer:</strong>  
+    This website is created for <strong>educational purposes only</strong>.  
+    Stock market trading involves risk. The strategies shown (ORB, 15-Minute, Common Signal) 
+    are for learning and analysis only and <strong>do not constitute financial advice</strong>.  
+    The creator is not responsible for any profits or losses incurred.  
+    Please consult a certified financial advisor before trading.
+  </p>
+</footer>
+
+</body>
+</html>
